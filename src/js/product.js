@@ -526,7 +526,7 @@ function renderCartPage() {
         plusUse.setAttributeNS(
             "http://www.w3.org/1999/xlink",
             "href",
-            "/src/icons/svg/plus.svg"
+            "/src/icons/svg/plus.svg#plus"
         );
         plus.appendChild(plusUse);
 
