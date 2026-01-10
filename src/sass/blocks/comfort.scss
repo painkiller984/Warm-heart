@@ -1,0 +1,148 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.comfort {
+    background-color: $black;
+    padding: 70px 0 90px;
+    color: $white;
+
+    &__title {
+        color: $white;
+    }
+
+    p {
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 140%;
+        text-align: left;
+    }
+
+    &__head {
+        p {
+            margin-top: 20px;
+        }
+    }
+
+    &__wrapper {
+        margin-top: 40px;
+    }
+
+    &__img {
+        object-fit: contain;
+        width: 307px;
+        height: 286px;
+        transform: rotate(-7deg);
+    }
+
+    &__shop {
+        margin-top: 40px;
+
+        &-text {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        &-btn {
+            width: 263px;
+            margin-top: 35px;
+        }
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .comfort {
+        &__img {
+            width: 343px;
+            height: 319px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .comfort {
+        padding: 90px 0 120px;
+
+        p {
+            font-size: 21px;
+        }
+
+        &__head {
+            p {
+                margin-top: 30px;
+            }
+        }
+
+        &__wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        &__img {
+            width: 297px;
+            height: 276px;
+        }
+
+        &__shop {
+            margin-top: 0;
+
+            &-text {
+                margin-top: 30px;
+            }
+
+            &-btn {
+                width: auto;
+                margin-top: 45px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .comfort {
+        &__wrapper {
+            gap: 56px;
+            justify-content: center;
+        }
+
+        &__img {
+            transform: translateY(45px) rotate(-7deg);
+            width: 379px;
+            height: 352px;
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .comfort {
+        padding: 150px 0 154px;
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 31px;
+        }
+
+        &__head {
+            margin-top: 60px;
+            width: 365px;
+        }
+
+        &__wrapper {
+            align-items: normal;
+            margin-top: 0;
+        }
+
+        &__img {
+            transform: rotate(-7deg);
+        }
+
+        &__shop {
+            width: 373px;
+            margin-top: 23px;
+        }
+    }
+}

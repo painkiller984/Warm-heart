@@ -1,0 +1,277 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.promo {
+    overflow-x: hidden;
+
+    .container {
+        background-color: $beige;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+
+        &-wrapper {
+            margin-top: 70px;
+        }
+
+        p {
+            margin-top: 20px;
+            color: $black;
+            font-size: 17px;
+            font-weight: 400;
+            line-height: 140%;
+            text-align: left;
+        }
+
+        &-btn {
+            margin-top: 35px;
+        }
+    }
+
+    .swiper.promo__swiper {
+        padding-top: 90px;
+        width: 100vw;
+        margin-left: -20px;
+
+        .swiper-slide {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            min-height: 287px;
+            background: url("/src/img/homepage/background_slider.png"),
+                $black center / cover no-repeat;
+            border: 1px solid rgba(0, 0, 0, 1);
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+            .promo__slide-img {
+                position: absolute;
+                width: 180px;
+                height: 174px;
+                transform: rotate(10deg);
+                top: -40px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+
+        .swiper-pagination {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            bottom: 90px;
+
+            .swiper-pagination-bullet {
+                width: 16px;
+                height: 16px;
+                background-color: $white;
+                opacity: 0.3;
+                margin: 0;
+            }
+
+            .swiper-pagination-bullet-active {
+                background-color: $white;
+                opacity: 1;
+            }
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            display: none;
+        }
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .promo {
+        .swiper.promo__swiper {
+            overflow: visible;
+
+            .swiper-slide {
+                min-height: 235px;
+
+                .promo__slide-img {
+                    top: -95px;
+                    right: 35px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .promo {
+        &__info {
+            position: relative;
+            min-height: 588px;
+            flex-direction: row;
+
+            &-wrapper {
+                margin-top: 90px;
+                width: 460px;
+            }
+
+            p {
+                margin-top: 30px;
+                font-size: 21px;
+                font-weight: 400;
+                line-height: 140%;
+                text-align: left;
+            }
+
+            &-btn {
+                margin-top: 45px;
+            }
+        }
+
+        .swiper.promo__swiper {
+            position: absolute;
+            overflow: hidden;
+            right: -20px;
+            padding-top: 0;
+            padding-left: 60px;
+            margin-left: 0;
+            width: 311px;
+            height: 100%;
+
+            .swiper-slide {
+                .promo__slide-img {
+                    width: 251px;
+                    height: 241px;
+                    top: auto;
+                    right: auto;
+                    left: -40px;
+                    bottom: 15px;
+                }
+            }
+
+            .swiper-pagination {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                gap: 30px;
+                right: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .promo {
+        .swiper.promo__swiper {
+            width: 451px;
+            padding-left: 160px;
+
+            .swiper-slide {
+                align-items: center;
+
+                .promo__slide-img {
+                    position: relative;
+                    width: 312px;
+                    height: 300px;
+                    bottom: auto;
+                    left: -140px;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        background: url("/src/img/homepage/promo_line_top.png")
+                            no-repeat;
+                        top: -30px;
+                        left: -30px;
+                        width: 108px;
+                        height: 108px;
+                        transform: rotate(-10deg);
+                    }
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        background: url("/src/img/homepage/promo_line_bottom.png")
+                            no-repeat;
+                        right: -40px;
+                        bottom: -40px;
+                        width: 112px;
+                        height: 112px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .promo {
+        .swiper.promo__swiper {
+            .swiper-button-prev,
+            .swiper-button-next {
+                display: block;
+                transform: rotate(90deg);
+                left: auto;
+                right: 5px;
+
+                .icon-arrow-left,
+                .icon-arrow-right {
+                    color: $white;
+                }
+            }
+
+            .swiper-button-prev {
+                top: 70px;
+            }
+
+            .swiper-button-next {
+                bottom: 70px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .promo {
+        &__info {
+            min-height: 770px;
+
+            &-wrapper {
+                margin-top: 181px;
+            }
+        }
+
+        .swiper.promo__swiper {
+            width: 976px;
+            padding-left: 230px;
+            right: -351px;
+
+            .swiper-slide {
+                .promo__slide-img {
+                    width: 405px;
+                    height: 390px;
+                    left: -370px;
+
+                    &::before {
+                        top: -50px;
+                        left: -40px;
+                    }
+
+                    &::after {
+                        right: -65px;
+                        bottom: -60px;
+                    }
+                }
+            }
+
+            .swiper-pagination {
+                right: 351px;
+            }
+
+            .swiper-button-prev,
+            .swiper-button-next {
+                right: 335px;
+            }
+        }
+    }
+}

@@ -1,0 +1,60 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as *;
+
+.btn {
+    @include btn-black;
+    font-size: 17px;
+}
+
+.btn-small {
+    @include btn-black-small;
+}
+
+.btn-white {
+    @include btn-white;
+    font-size: 17px;
+}
+
+.filter-tag {
+    @include filter-tag;
+    font-size: 15px;
+}
+
+.btn-actions {
+    @include btn-actions;
+    font-size: 17px;
+    transition: all 0.3s ease;
+}
+
+.btn-reset {
+    background: $white;
+    border: 1px solid $beige;
+    color: $black;
+}
+
+.btn-reset:focus {
+    background: $beige;
+}
+
+.btn-apply {
+    background: $black;
+    border: none;
+    color: $white;
+}
+
+.btn-apply:focus {
+    background: rgba(0, 0, 0, 0.63);
+}
+
+@media screen and (min-width: 768px) {
+    .btn {
+        font-size: 21px;
+    }
+    .btn-white {
+        @include btn-white;
+        font-size: 21px;
+    }
+    .filter-tag {
+        font-size: 17px;
+    }
+}

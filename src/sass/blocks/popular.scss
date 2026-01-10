@@ -1,0 +1,143 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as *;
+
+.popular {
+    padding: 70px 0 90px;
+
+    .swiper.popular__swiper {
+        margin-top: 40px;
+
+        .swiper-slide {
+            a {
+                text-decoration: none;
+            }
+            .popular__card {
+                @include flex-center;
+                @include slide-head;
+                img {
+                    @include slide-img;
+                }
+
+                @include slide-focus;
+            }
+
+            .popular__slide-title {
+                margin-top: 10px;
+            }
+
+            .popular__slide-meta {
+                margin-top: 1px;
+                @include slide-info;
+            }
+        }
+
+        .popular__controls {
+            margin-top: 40px;
+            @include flex-center;
+            gap: 50px;
+            .swiper-button-prev,
+            .swiper-button-next {
+                display: none;
+            }
+
+            .swiper-pagination {
+                position: static;
+                @include flex-center;
+                width: 246px;
+                gap: 30px;
+                .swiper-pagination-bullet {
+                    width: 16px;
+                    height: 16px;
+                    margin: 0 !important;
+                    flex: 0 0 auto;
+                }
+
+                .swiper-pagination-bullet-active {
+                    background-color: $black;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .popular {
+        .swiper.popular__swiper {
+            .swiper-slide {
+                .popular__card {
+                    img {
+                        width: 160px;
+                        height: 154px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .popular {
+        padding: 90px 0 110px;
+
+        .swiper.popular__swiper {
+            .swiper-slide {
+                .popular__card {
+                    img {
+                        width: 254px;
+                        height: 243px;
+                    }
+                }
+                .popular__slide-meta {
+                    font-size: 21px;
+                }
+            }
+
+            .popular__controls {
+                margin-top: 50px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .popular {
+        .swiper.popular__swiper {
+            .swiper-slide {
+                .popular__card {
+                    img {
+                        width: 207px;
+                        height: 198px;
+                    }
+                    @include slide-hover;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .popular {
+        padding: 130px 0 150px;
+
+        .swiper.popular__swiper {
+            .swiper-slide {
+                .popular__card {
+                    img {
+                        width: 266px;
+                        height: 256px;
+                    }
+                }
+            }
+            .popular__controls {
+                margin-top: 60px;
+                @include flex-center;
+                gap: 50px;
+
+                .swiper-button-prev,
+                .swiper-button-next {
+                    @include navigation-arrow;
+                }
+            }
+        }
+    }
+}

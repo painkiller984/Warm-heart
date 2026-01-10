@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Warm Heart shop" />
+        <meta name="description" content="Website for Warm Heart" />
+        <title>Shop</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            href="/src/favicons/favicon-96x96.png"
+            sizes="96x96"
+        />
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="/src/favicons/favicon.svg"
+        />
+        <link rel="shortcut icon" href="/src/favicons/favicon.ico" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/src/favicons/apple-touch-icon.png"
+        />
+        <link rel="manifest" href="/src/favicons/site.webmanifest" />
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__nav">
+                <a href="shop.html">Shop</a><a href="about.html">About us</a
+                ><a href="contacts.html">Contacts</a>
+            </div>
+
+            <div class="header__burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="header__menu">
+                <div class="header__menu-close"><span></span><span></span></div>
+                <div class="header__menu-links">
+                    <a href="shop.html">Shop</a>
+                    <a href="about.html">About us</a>
+                    <a href="contacts.html">Contacts</a>
+                </div>
+                <div class="header__menu-line"></div>
+                <form action="#" class="header__menu-search-form">
+                    <input
+                        class="header__menu-search"
+                        type="search"
+                        name="search"
+                        placeholder="Search"
+                    />
+                </form>
+                <a href="cart.html">Cart (<span class="cart-count">0</span>)</a>
+            </div>
+
+            <div class="header__overlay"></div>
+
+            <a href="index.html" class="header__title">
+                <span>wh</span>
+                <span>warm heart</span>
+            </a>
+
+            <div class="header__links">
+                <div class="header__links-left">
+                    <span>Search</span>
+                    <svg class="icon-search">
+                        <use href="/src/icons/sprite.svg#search"></use>
+                    </svg>
+                </div>
+                <div class="header__links-right">
+                    <a href="#">
+                        <svg class="icon-shopping-bag">
+                            <use
+                                href="/src/icons/sprite.svg#shopping-bag"
+                            ></use>
+                        </svg>
+                    </a>
+                    <a href="cart.html">
+                        <div class="header__links-right-text">
+                            <span>Cart </span>(<span class="cart-count">0</span
+                            >)
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <section class="shop-promo">
+            <div class="container">
+                <h1 class="title-h1">Shop</h1>
+                <p class="shop-promo__text">
+                    In our store you will find a large number of high-quality
+                    blankets that will help make your home more comfortable and
+                    warm your life.
+                </p>
+            </div>
+        </section>
+        <section class="shop">
+            <div class="container">
+                <div class="shop__filters">
+                    <button class="shop__filters-left" id="filterBtn">
+                        <p>Filter</p>
+                        <svg class="icon-filter">
+                            <use
+                                xlink:href="/src/icons/sprite.svg#filter"
+                            ></use>
+                        </svg>
+                    </button>
+                    <div class="shop__filters-group">
+                        <div class="filter-group">
+                            <div class="filter-group__header">
+                                <p>Size</p>
+                                <svg class="filter-arrow">
+                                    <use
+                                        xlink:href="/src/icons/svg/shop_filter-icon.svg"
+                                    ></use>
+                                </svg>
+                            </div>
+                            <div class="filter-options">
+                                <div class="filter-option">
+                                    <label for="size-110x170">110x170 cm</label>
+                                </div>
+                                <div class="filter-option">
+                                    <label for="size-120x180">120x180 cm</label>
+                                </div>
+                                <div class="filter-option">
+                                    <label for="size-130x170">130x170 cm</label>
+                                </div>
+                                <div class="filter-option">
+                                    <label for="size-150x200">150x200 cm</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-group">
+                            <div class="filter-group__header">
+                                <p>Color</p>
+                                <svg class="filter-arrow">
+                                    <use
+                                        xlink:href="/src/icons/svg/shop_filter-icon.svg"
+                                    ></use>
+                                </svg>
+                            </div>
+                            <div class="filter-options">
+                                <div class="filter-option">
+                                    <label for="color-gray">Gray</label>
+                                </div>
+                                <div class="filter-option">
+                                    <label for="color-cappuccino"
+                                        >Cappuccino</label
+                                    >
+                                </div>
+                                <div class="filter-option">
+                                    <label for="color-red">Red</label>
+                                </div>
+                                <div class="filter-option">
+                                    <label for="color-beige">Beige</label>
+                                </div>
+                                <div class="filter-option">
+                                    <label for="color-orange">Orange</label>
+                                </div>
+                                <div class="filter-option">
+                                    <label for="color-yellow-beige"
+                                        >Yellow-beige</label
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-group">
+                            <div class="filter-group__header">
+                                <p>Material</p>
+                                <svg class="filter-arrow">
+                                    <use
+                                        xlink:href="/src/icons/svg/shop_filter-icon.svg"
+                                    ></use>
+                                </svg>
+                            </div>
+                            <div class="filter-options">
+                                <div class="filter-option">
+                                    <label for="material-Synthetics"
+                                        >Synthetics</label
+                                    >
+                                </div>
+                                <div class="filter-option">
+                                    <label for="material-Natural"
+                                        >Natural</label
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-group">
+                            <div class="filter-group__header">
+                                <p>Price</p>
+                                <svg class="filter-arrow">
+                                    <use
+                                        xlink:href="/src/icons/svg/shop_filter-icon.svg"
+                                    ></use>
+                                </svg>
+                            </div>
+                            <div class="filter-options">
+                                <div class="filter-option">
+                                    <label for="price-90-179">€90 - €179</label>
+                                </div>
+                                <div class="filter-option">
+                                    <label for="price-179+">€179+</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shop__filters-right">
+                        <p class="shop__filters-right-count"></p>
+                        <div class="shop__filters-right-view">
+                            <svg class="icon-interactX4">
+                                <use
+                                    xlink:href="/src/icons/sprite.svg#interactX4"
+                                ></use>
+                            </svg>
+                            <a href="shop-2.html"
+                                ><svg class="icon-interactX2">
+                                    <use
+                                        xlink:href="/src/icons/sprite.svg#interactX2"
+                                    ></use></svg
+                            ></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="active-filters" id="activeFilters"></div>
+
+                <!-- Modal Overlay -->
+                <div class="filter-modal-overlay" id="modalOverlay"></div>
+
+                <!-- Filter Modal -->
+                <div class="filter-modal" id="filterModal">
+                    <div class="filter-modal__header">
+                        <p>Filters</p>
+                        <button class="close-modal" id="closeModal">
+                            <svg class="icon-chrest">
+                                <use
+                                    xlink:href="/src/icons/sprite.svg?v=1#shop_chrest"
+                                ></use>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="filter-modal__content">
+                        <!-- Size Filter -->
+                        <div class="filter-group">
+                            <div class="filter-group__header">
+                                <p>Size</p>
+                                <svg class="filter-arrow">
+                                    <use
+                                        xlink:href="/src/icons/svg/shop_filter-icon.svg"
+                                    ></use>
+                                </svg>
+                            </div>
+                            <div class="filter-options">
+                                <div class="filter-option">
+                                    <input
+                                        type="checkbox"
+                                        id="size-110x170"
+                                        value="110x170"
+                                        data-label="110x170 cm"
+                                    />
+                                    <label for="size-110x170">110x170 cm</label>
+                                </div>
+                                <div class="filter-option">
+                                    <input
+                                        type="checkbox"
+                                        id="size-120x180"
+                                        value="120x180"
+                                        data-label="120x180 cm"
+                                    />
+                                    <label for="size-120x180">120x180 cm</label>
+                                </div>
+                                <div class="filter-option">
+                                    <input
+                                        type="checkbox"
+                                        id="size-130x170"
+                                        value="130x170"
+                                        data-label="130x170 cm"
+                                    />
+                                    <label for="size-130x170">130x170 cm</label>
+                                </div>
+                                <div class="filter-option">
+                                    <input
+                                        type="checkbox"
+                                        id="size-150x200"
+                                        value="150x200"
+                                        data-label="150x200 cm"
+                                    />
+                                    <label for="size-150x200">150x200 cm</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Color Filter -->
+                        <div class="filter-group">
+                            <div class="filter-group__header">
+                                <p>Color</p>
+                                <svg class="filter-arrow">
+                                    <use
+                                        xlink:href="/src/icons/svg/shop_filter-icon.svg"
+                                    ></use>
+                                </svg>
+                            </div>
+                            <div class="filter-options">
+                                <div class="filter-option">
+                                    <input
+                                        type="checkbox"
+                                        id="color-gray"
+                                        value="gray"
+                                        data-label="Gray"
+                                    />
+                                    <label for="color-gray">Gray</label>
+                                </div>
+                                <div class="filter-option">
+                                    <input
+                                        type="checkbox"
+                                        id="color-orange"
+                                        value="orange"
+                                        data-label="orange"
+                                    />
+                                    <label for="color-orange">Orange</label>
+                                </div>
+                                <div class="filter-option">
+                                    <input
+                                        type="checkbox"
+                                        id="color-cappuccino"
+                                        value="cappuccino"
+                                        data-label="cappuccino"
+                                    />
+                                    <label for="color-cappuccino"
+                                        >Cappuccino</label
+                                    >
+                                </div>
+                                <div class="filter-option">
+                                    <input
+                                        type="checkbox"
+                                        id="color-red"
+                                        value="red"
+                                        data-label="Red"
+                                    />
+                                    <label for="color-red">Red</label>
+                                </div>
+                                <div class="filter-option">
+                                    <input
+                                        type="checkbox"
+                                        id="color-beige"
+                                        value="beige"
+                                        data-label="beige"
+                                    />
+                                    <label for="color-beige">Beige</label>
+                                </div>
+                                <div class="filter-option">
+                                    <input
+                                        type="checkbox"
+                                        id="color-yellow-beige"
+                                        value="yellow-beige"
+                                        data-label="yellow-beige"
+                                    />
+                                    <label for="color-yellow-beige"
+                                        >Yellow-beige</label
+                                    >
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Material Filter -->
+                        <div class="filter-group">
+                            <div class="filter-group__header">
+                                <p>Material</p>
+                                <svg class="filter-arrow">
+                                    <use
+                                        xlink:href="/src/icons/svg/shop_filter-icon.svg"
+                                    ></use>
+                                </svg>
+                            </div>
+                            <div class="filter-options">
+                                <div class="filter-option">
+                                    <input
+                                        type="checkbox"
+                                        id="material-Synthetics"
+                                        value="Synthetics"
+                                        data-label="Synthetics"
+                                    />
+                                    <label for="material-Synthetics"
+                                        >Synthetics</label
+                                    >
+                                </div>
+                                <div class="filter-option">
+                                    <input
+                                        type="checkbox"
+                                        id="material-Natural"
+                                        value="Natural"
+                                        data-label="Natural"
+                                    />
+                                    <label for="material-Natural"
+                                        >Natural</label
+                                    >
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Price Filter -->
+                        <div class="filter-group">
+                            <div class="filter-group__header">
+                                <p>Price</p>
+                                <svg class="filter-arrow">
+                                    <use
+                                        xlink:href="/src/icons/svg/shop_filter-icon.svg"
+                                    ></use>
+                                </svg>
+                            </div>
+                            <div class="filter-options">
+                                <div class="filter-option">
+                                    <input
+                                        type="checkbox"
+                                        id="price-90-179"
+                                        value="90-179"
+                                        data-label="€90 - €179"
+                                    />
+                                    <label for="price-90-179">€90 - €179</label>
+                                </div>
+                                <div class="filter-option">
+                                    <input
+                                        type="checkbox"
+                                        id="price-179+"
+                                        value="179+"
+                                        data-label="€179+"
+                                    />
+                                    <label for="price-179+">€179+</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-actions">
+                        <button class="btn-actions btn-reset" id="resetBtn">
+                            Reset
+                        </button>
+                        <button class="btn-actions btn-apply" id="applyBtn">
+                            Apply
+                        </button>
+                    </div>
+                </div>
+                <div class="swiper shop__swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a
+                                class="card"
+                                href="card.html?id=ingrum"
+                                data-size="130x170"
+                                data-color="gray"
+                                data-material="natural"
+                                data-price="90"
+                            >
+                                <div class="card__img">
+                                    <img
+                                        src="/src/img/shop/ingrum.png"
+                                        alt="ingrum"
+                                    />
+                                </div>
+                                <h3 class="title-h3 card__title">Ingrun</h3>
+                                <div class="card__info">
+                                    <p>130x170 cm</p>
+                                    <p>€90</p>
+                                </div>
+                            </a>
+                            <a
+                                class="card"
+                                href="card.html?id=mialotta"
+                                data-size="130x170"
+                                data-color="orange"
+                                data-material="synthetics"
+                                data-price="140"
+                            >
+                                <div class="card__img">
+                                    <img
+                                        src="/src/img/shop/mialota.png"
+                                        alt="mialotta"
+                                    />
+                                </div>
+                                <h3 class="title-h3 card__title">Mialotta</h3>
+                                <div class="card__info">
+                                    <p>130x170 cm</p>
+                                    <p>€140</p>
+                                </div>
+                            </a>
+                            <a
+                                class="card"
+                                href="card.html?id=luddmalla"
+                                data-size="130x170"
+                                data-color="gray"
+                                data-material="natural"
+                                data-price="95"
+                            >
+                                <div class="card__img">
+                                    <img
+                                        src="/src/img/shop/ludmalla.png"
+                                        alt="luddmalla"
+                                    />
+                                </div>
+                                <h3 class="title-h3 card__title">Luddmalla</h3>
+                                <div class="card__info">
+                                    <p>130x170 cm</p>
+                                    <p>€95</p>
+                                </div>
+                            </a>
+                            <a
+                                class="card"
+                                href="card.html?id=vivianna"
+                                data-size="120x180"
+                                data-color="cappuccino"
+                                data-material="synthetics"
+                                data-price="175"
+                            >
+                                <div class="card__img">
+                                    <img
+                                        src="/src/img/shop/vivianna.png"
+                                        alt="vivianna"
+                                    />
+                                </div>
+                                <h3 class="title-h3 card__title">Vivianna</h3>
+                                <div class="card__info">
+                                    <p>120x180 cm</p>
+                                    <p>€175</p>
+                                </div>
+                            </a>
+                            <a
+                                class="card"
+                                href="card.html?id=evali"
+                                data-size="130x170"
+                                data-color="cappuccino"
+                                data-material="natural"
+                                data-price="90"
+                            >
+                                <div class="card__img">
+                                    <img
+                                        src="/src/img/shop/evali.png"
+                                        alt="Evali"
+                                    />
+                                </div>
+                                <h3 class="title-h3 card__title">Evali</h3>
+                                <div class="card__info">
+                                    <p>130x170 cm</p>
+                                    <p>€90</p>
+                                </div>
+                            </a>
+                            <a
+                                class="card"
+                                href="card.html?id=kersti"
+                                data-size="150x200"
+                                data-color="orange"
+                                data-material="natural"
+                                data-price="175"
+                            >
+                                <div class="card__img">
+                                    <img
+                                        src="/src/img/shop/kersti.png"
+                                        alt="Kersti"
+                                    />
+                                </div>
+                                <h3 class="title-h3 card__title">Kersti</h3>
+                                <div class="card__info">
+                                    <p>150x200 cm</p>
+                                    <p>€175</p>
+                                </div>
+                            </a>
+                            <a
+                                class="card"
+                                href="card.html?id=helgun"
+                                data-size="150x200"
+                                data-color="beige"
+                                data-material="synthetics"
+                                data-price="135"
+                            >
+                                <div class="card__img">
+                                    <img
+                                        src="/src/img/shop/helgum.png"
+                                        alt="Helgun"
+                                    />
+                                </div>
+                                <h3 class="title-h3 card__title">Helgun</h3>
+                                <div class="card__info">
+                                    <p>150x200 cm</p>
+                                    <p>€135</p>
+                                </div>
+                            </a>
+                            <a
+                                class="card"
+                                href="card.html?id=dagnhild"
+                                data-size="150x200"
+                                data-color="yellow-beige"
+                                data-material="natural"
+                                data-price="150"
+                            >
+                                <div class="card__img">
+                                    <img
+                                        src="/src/img/shop/dagnhild.png"
+                                        alt="Dagnhild"
+                                    />
+                                </div>
+                                <h3 class="title-h3 card__title">Dagnhild</h3>
+                                <div class="card__info">
+                                    <p>150x200 cm</p>
+                                    <p>€150</p>
+                                </div>
+                            </a>
+                            <a
+                                class="card"
+                                href="card.html?id=varkrage"
+                                data-size="110x170"
+                                data-color="red"
+                                data-material="synthetics"
+                                data-price="90"
+                            >
+                                <div class="card__img">
+                                    <img
+                                        src="/src/img/shop/varkrage.png"
+                                        alt="Varkrage"
+                                    />
+                                </div>
+                                <h3 class="title-h3 card__title">Varkrage</h3>
+                                <div class="card__info">
+                                    <p>110x170 cm</p>
+                                    <p>€90</p>
+                                </div>
+                            </a>
+                            <a
+                                class="card"
+                                href="card.html?id=dablidun"
+                                data-size="150x200"
+                                data-color="red"
+                                data-material="synthetics"
+                                data-price="170"
+                            >
+                                <div class="card__img">
+                                    <img
+                                        src="/src/img/shop/dadlidun.png"
+                                        alt="Dablidun"
+                                    />
+                                </div>
+                                <h3 class="title-h3 card__title">Dablidun</h3>
+                                <div class="card__info">
+                                    <p>150x200 cm</p>
+                                    <p>€170</p>
+                                </div>
+                            </a>
+                            <a
+                                class="card"
+                                href="card.html?id=ingabritta"
+                                data-size="130x170"
+                                data-color="beige"
+                                data-material="synthetics"
+                                data-price="120"
+                            >
+                                <div class="card__img">
+                                    <img
+                                        src="/src/img/shop/ingabrita.png"
+                                        alt="Ingabritta"
+                                    />
+                                </div>
+                                <h3 class="title-h3 card__title">Ingabritta</h3>
+                                <div class="card__info">
+                                    <p>130x170 cm</p>
+                                    <p>€120</p>
+                                </div>
+                            </a>
+                            <a
+                                class="card"
+                                href="card.html?id=ylvali"
+                                data-size="150x200"
+                                data-color="gray"
+                                data-material="synthetics"
+                                data-price="110"
+                            >
+                                <div class="card__img">
+                                    <img
+                                        src="/src/img/shop/yivali.png"
+                                        alt="Ylvali"
+                                    />
+                                </div>
+                                <h3 class="title-h3 card__title">Ylvali</h3>
+                                <div class="card__info">
+                                    <p>150x200 cm</p>
+                                    <p>€110</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">#</div>
+                        <div class="swiper-slide">#</div>
+                        <div class="swiper-slide">#</div>
+                        <div class="swiper-slide">#</div>
+                        <div class="swiper-slide">#</div>
+                        <div class="swiper-slide">#</div>
+                        <div class="swiper-slide">#</div>
+                    </div>
+                    <div class="shop__controls">
+                        <div class="swiper-button-prev">
+                            <svg class="icon-arrow-left">
+                                <use
+                                    href="/src/icons/sprite.svg#arrow-left"
+                                ></use>
+                            </svg>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next">
+                            <svg class="icon-arrow-right">
+                                <use
+                                    href="/src/icons/sprite.svg#arrow-right"
+                                ></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="last-viewed">
+            <div class="container">
+                <h2 class="title-h2">Last viewed</h2>
+                <div class="last-viewed__cards">
+                    <a href="card.html"
+                        ><div class="last-viewed__card"></div
+                    ></a>
+                    <a href="card.html"
+                        ><div class="last-viewed__card"></div
+                    ></a>
+                    <a href="card.html"
+                        ><div class="last-viewed__card"></div
+                    ></a>
+                    <a href="card.html"
+                        ><div class="last-viewed__card"></div
+                    ></a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__wrapper">
+                    <div class="footer__head">
+                        <h4 class="title-h4 footer__head-title">
+                            <a href="index.html">warm heart</a>
+                        </h4>
+
+                        <div class="footer__head-social">
+                            <a href="#"
+                                ><svg class="footer__head-social-icon">
+                                    <use
+                                        xlink:href="/src/icons/sprite.svg#instagram"
+                                    ></use></svg
+                            ></a>
+                            <a href="#"
+                                ><svg class="footer__head-social-icon">
+                                    <use
+                                        xlink:href="/src/icons/sprite.svg#facebook"
+                                    ></use></svg
+                            ></a>
+                            <a href="#"
+                                ><svg class="footer__head-social-icon">
+                                    <use
+                                        xlink:href="/src/icons/sprite.svg#twitter"
+                                    ></use></svg
+                            ></a>
+                        </div>
+                    </div>
+                    <div class="footer__privacy-head">
+                        <p>© WARM HEART 2025</p>
+                        <p><a href="privacy.html">Privacy policy</a></p>
+                    </div>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__links-item">
+                        <div class="footer__links-item-header">Info</div>
+                        <div class="footer__links-item-body">
+                            <ul>
+                                <li><a href="about.html">About us</a></li>
+                                <li><a href="contacts.html">Contacts</a></li>
+                                <li><a href="shop.html">Shop</a></li>
+                                <li><a href="FAQ.html">FAQ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer__links-line"></div>
+
+                    <div class="footer__links-item">
+                        <div class="footer__links-item-header">
+                            Customer service
+                        </div>
+                        <div class="footer__links-item-body">
+                            <ul>
+                                <li><a href="#">Delivery and pickup</a></li>
+                                <li><a href="#">Payment</a></li>
+                                <li><a href="#">Exchange and return</a></li>
+                                <li><a href="#">Help</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer__links-line"></div>
+
+                    <div class="footer__links-item">
+                        <div class="footer__links-item-header">
+                            Useful information
+                        </div>
+                        <div class="footer__links-item-body">
+                            <ul>
+                                <li><a href="#">Suppliers</a></li>
+                                <li><a href="#">Buying guides</a></li>
+                                <li><a href="#">Principle of operation</a></li>
+                                <li><a href="#">Press service</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer__links-line"></div>
+                </div>
+
+                <div class="footer__privacy">
+                    <p>© WARM HEART 2025</p>
+                    <p><a href="privacy.html">Privacy policy</a></p>
+                </div>
+            </div>
+        </footer>
+        <script type="module" src="/src/js/script.js"></script>
+    </body>
+</html>

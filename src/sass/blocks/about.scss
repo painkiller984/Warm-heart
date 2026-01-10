@@ -1,0 +1,367 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.about {
+    padding: 40px 0 100px;
+    color: $black;
+    overflow: hidden;
+
+    &__intro {
+        margin-top: 10px;
+        padding: 30px 20px;
+        display: grid;
+        gap: 24px;
+        background: $beige;
+        border-radius: 25px;
+    }
+
+    &__eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 14px;
+        border-radius: 999px;
+        background: $white;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+    }
+
+    &__lead {
+        margin-top: 6px;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 140%;
+        max-width: 720px;
+    }
+
+    &__chips {
+        margin-top: 6px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    &__chip {
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 16px;
+        border-radius: 999px;
+        background: $white;
+        border: 1px solid rgba(44, 44, 44, 0.08);
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 130%;
+    }
+
+    &__actions {
+        margin-top: 4px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    &__cta-btn {
+        width: fit-content;
+        text-decoration: none;
+    }
+
+    &__note {
+        font-size: 15px;
+        line-height: 140%;
+        opacity: 0.7;
+        max-width: 520px;
+    }
+
+    &__intro-media {
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__image {
+        width: 100%;
+        max-width: 360px;
+        background: $white;
+        border-radius: 20px;
+        padding: 12px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+    }
+
+    &__badge {
+        position: absolute;
+        right: 12px;
+        bottom: -18px;
+        width: min(240px, 70%);
+        padding: 18px;
+        border-radius: 18px;
+        background: $black;
+        color: $white;
+        font-size: 15px;
+        line-height: 140%;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    &__badge-title {
+        margin-bottom: 8px;
+        font-weight: 900;
+    }
+
+    &__values {
+        margin-top: 50px;
+        display: grid;
+        gap: 16px;
+    }
+
+    &__values-card {
+        padding: 20px;
+        border-radius: 18px;
+        background: $beige;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        p {
+            font-size: 17px;
+            font-weight: 400;
+            line-height: 140%;
+        }
+    }
+
+    &__story {
+        margin-top: 60px;
+        padding: 30px 20px;
+        border-radius: 25px;
+        background: $black;
+        color: $white;
+        display: grid;
+        gap: 30px;
+    }
+
+    &__story-title {
+        color: $white;
+    }
+
+    &__story p {
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 140%;
+    }
+
+    &__list {
+        margin: 18px 0 0;
+        padding-left: 18px;
+        display: grid;
+        gap: 10px;
+
+        li {
+            font-size: 17px;
+            font-weight: 400;
+            line-height: 140%;
+        }
+    }
+
+    &__story-actions {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    &__story-btn {
+        width: fit-content;
+        text-decoration: none;
+    }
+
+    &__story-link {
+        color: $white;
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 130%;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+    }
+
+    &__story-media img {
+        width: 100%;
+        max-width: 420px;
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    &__bottom {
+        margin-top: 60px;
+        display: grid;
+        gap: 16px;
+    }
+
+    &__bottom-card {
+        padding: 20px;
+        border-radius: 20px;
+        background: $white;
+        border: 1px solid $beige;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        p {
+            font-size: 17px;
+            font-weight: 400;
+            line-height: 140%;
+        }
+
+        ul {
+            padding-left: 18px;
+            display: grid;
+            gap: 10px;
+
+            li {
+                font-size: 17px;
+                line-height: 140%;
+            }
+        }
+    }
+
+    &__bottom-card--accent {
+        background: $beige;
+        border: none;
+    }
+
+    &__bottom-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    &__bottom-btn {
+        width: fit-content;
+        text-decoration: none;
+    }
+
+    &__bottom-link {
+        color: $black;
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 130%;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        width: fit-content;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .about {
+        &__intro {
+            padding: 40px 30px;
+        }
+
+        &__badge {
+            right: 30px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .about {
+        padding: 60px 0 140px;
+
+        &__intro {
+            grid-template-columns: 1.1fr 0.9fr;
+            align-items: center;
+            gap: 32px;
+        }
+
+        &__lead,
+        &__values-card p,
+        &__story p,
+        &__list li,
+        &__bottom-card p,
+        &__bottom-card li {
+            font-size: 21px;
+        }
+
+        &__chip {
+            font-size: 17px;
+        }
+
+        &__actions {
+            align-items: flex-start;
+        }
+
+        &__badge {
+            bottom: 0;
+        }
+
+        &__values {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        &__values-card {
+            padding: 24px;
+        }
+
+        &__story {
+            grid-template-columns: 1.1fr 0.9fr;
+            padding: 40px 30px;
+            align-items: center;
+            gap: 40px;
+        }
+
+        &__story-actions {
+            flex-direction: row;
+            align-items: center;
+            gap: 18px;
+        }
+
+        &__bottom {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+        }
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .about {
+        &__image {
+            max-width: 430px;
+        }
+
+        &__badge {
+            bottom: 18px;
+        }
+
+        &__story {
+            padding: 50px 40px;
+            gap: 50px;
+        }
+
+        &__story-media img {
+            max-width: 480px;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .about {
+        padding: 80px 0 170px;
+
+        &__intro {
+            padding: 50px;
+            gap: 40px;
+        }
+
+        &__values {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+        &__story {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        &__bottom {
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 30px;
+        }
+    }
+}

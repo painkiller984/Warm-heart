@@ -1,0 +1,47 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.shop-promo {
+    padding: 25px 0 40px;
+    background-color: $beige;
+    &__text {
+        margin-top: 10px;
+        color: $black;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 130%;
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .shop-promo {
+        padding: 20px 0 40px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .shop-promo {
+        padding: 28px 0 50px;
+        .container {
+            display: flex;
+            gap: 50px;
+        }
+        &__text {
+            margin-top: 17px;
+            font-size: 21px;
+        }
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .shop-promo {
+        padding: 28px 0 50px;
+        display: flex;
+        gap: 50px;
+        &__text {
+            margin-top: 17px;
+            font-size: 21px;
+            width: 636px;
+        }
+    }
+}

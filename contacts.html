@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Website for Warm Heart" />
+        <title>Contacts</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            href="/src/favicons/favicon-96x96.png"
+            sizes="96x96"
+        />
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="/src/favicons/favicon.svg"
+        />
+        <link rel="shortcut icon" href="/src/favicons/favicon.ico" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/src/favicons/apple-touch-icon.png"
+        />
+        <link rel="manifest" href="/src/favicons/site.webmanifest" />
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__nav">
+                <a href="shop.html">Shop</a><a href="about.html">About us</a
+                ><a href="contacts.html">Contacts</a>
+            </div>
+
+            <div class="header__burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="header__menu">
+                <div class="header__menu-close"><span></span><span></span></div>
+                <div class="header__menu-links">
+                    <a href="shop.html">Shop</a>
+                    <a href="about.html">About us</a>
+                    <a href="contacts.html">Contacts</a>
+                </div>
+                <div class="header__menu-line"></div>
+                <form action="#" class="header__menu-search-form">
+                    <input
+                        class="header__menu-search"
+                        type="search"
+                        name="search"
+                        placeholder="Search"
+                    />
+                </form>
+                <a href="cart.html">Cart (<span class="cart-count">0</span>)</a>
+            </div>
+
+            <div class="header__overlay"></div>
+
+            <a href="index.html" class="header__title">
+                <span>wh</span>
+                <span>warm heart</span>
+            </a>
+
+            <div class="header__links">
+                <div class="header__links-left">
+                    <span>Search</span>
+                    <svg class="icon-search">
+                        <use href="/src/icons/sprite.svg#search"></use>
+                    </svg>
+                </div>
+                <div class="header__links-right">
+                    <a href="cart.html">
+                        <svg class="icon-shopping-bag">
+                            <use
+                                href="/src/icons/sprite.svg#shopping-bag"
+                            ></use>
+                        </svg>
+                    </a>
+                    <a href="cart.html">
+                        <div class="header__links-right-text">
+                            <span>Cart </span>(<span class="cart-count">0</span
+                            >)
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <section class="contacts">
+            <div class="container">
+                <div class="title-h1">Contacts</div>
+
+                <div class="contacts__wrapper">
+                    <div id="contacts-map"></div>
+                    <div class="contacts__address-wrapper">
+                        <div class="contacts__address">
+                            <p class="title-h3 contacts__address-title">
+                                WARM HEART SHOP
+                            </p>
+                            <ul class="contacts__address-info">
+                                <li>
+                                    Phone number:
+                                    <a href="tel:+44 330 321 8754"
+                                        >+44 330 321 8754</a
+                                    >
+                                </li>
+                                <li>
+                                    Address:
+                                    <span>2A Craven Street, Northampton</span>
+                                </li>
+                                <li>
+                                    Email:
+                                    <a href="mailto:warmheart.shop@gmail.com"
+                                        >warmheart.shop@gmail.com</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="contacts__address">
+                            <p class="title-h3 contacts__address-title">
+                                WARM HEART OFFICE
+                            </p>
+                            <ul class="contacts__address-info">
+                                <li>
+                                    Phone number:
+                                    <a href="tel:+44 330 456 1425"
+                                        >+44 330 456 1425</a
+                                    >
+                                </li>
+                                <li>
+                                    Address:
+                                    <span>70 Edith Street, Northampton</span>
+                                </li>
+                                <li>
+                                    Email:
+                                    <a href="mailto:warmheart.office@gmail.com"
+                                        >warmheart.office@gmail.com</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__wrapper">
+                    <div class="footer__head">
+                        <h4 class="title-h4 footer__head-title">
+                            <a href="index.html">warm heart</a>
+                        </h4>
+
+                        <div class="footer__head-social">
+                            <a href="#"
+                                ><svg class="footer__head-social-icon">
+                                    <use
+                                        xlink:href="/src/icons/sprite.svg#instagram"
+                                    ></use></svg
+                            ></a>
+                            <a href="#"
+                                ><svg class="footer__head-social-icon">
+                                    <use
+                                        xlink:href="/src/icons/sprite.svg#facebook"
+                                    ></use></svg
+                            ></a>
+                            <a href="#"
+                                ><svg class="footer__head-social-icon">
+                                    <use
+                                        xlink:href="/src/icons/sprite.svg#twitter"
+                                    ></use></svg
+                            ></a>
+                        </div>
+                    </div>
+                    <div class="footer__privacy-head">
+                        <p>© WARM HEART 2025</p>
+                        <p><a href="privacy.html">Privacy policy</a></p>
+                    </div>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__links-item">
+                        <div class="footer__links-item-header">Info</div>
+                        <div class="footer__links-item-body">
+                            <ul>
+                                <li><a href="about.html">About us</a></li>
+                                <li><a href="contacts.html">Contacts</a></li>
+                                <li><a href="shop.html">Shop</a></li>
+                                <li><a href="FAQ.html">FAQ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer__links-line"></div>
+
+                    <div class="footer__links-item">
+                        <div class="footer__links-item-header">
+                            Customer service
+                        </div>
+                        <div class="footer__links-item-body">
+                            <ul>
+                                <li><a href="#">Delivery and pickup</a></li>
+                                <li><a href="#">Payment</a></li>
+                                <li><a href="#">Exchange and return</a></li>
+                                <li><a href="#">Help</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer__links-line"></div>
+
+                    <div class="footer__links-item">
+                        <div class="footer__links-item-header">
+                            Useful information
+                        </div>
+                        <div class="footer__links-item-body">
+                            <ul>
+                                <li><a href="#">Suppliers</a></li>
+                                <li><a href="#">Buying guides</a></li>
+                                <li><a href="#">Principle of operation</a></li>
+                                <li><a href="#">Press service</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer__links-line"></div>
+                </div>
+
+                <div class="footer__privacy">
+                    <p>© WARM HEART 2025</p>
+                    <p><a href="privacy.html">Privacy policy</a></p>
+                </div>
+            </div>
+        </footer>
+        <script type="module" src="/src/js/script.js"></script>
+    </body>
+</html>

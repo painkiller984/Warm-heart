@@ -1,0 +1,22 @@
+{
+  "name": "warm_heart",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "Anton",
+  "type": "commonjs",
+  "main": "vite.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "postcss-pxtorem": "^6.1.0",
+    "vite": "^7.2.6",
+    "vite-plugin-imagemin": "^0.6.1"
+  },
+  "dependencies": {
+    "just-validate": "^4.3.0",
+    "swiper": "^12.0.3"
+  }
+}

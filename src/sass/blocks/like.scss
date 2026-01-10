@@ -1,0 +1,185 @@
+@use "/src/sass/base/mixins.scss" as *;
+@use "/src/sass/base/variables.scss" as *;
+
+.like {
+    padding: 60px 0 70px;
+    &__swiper {
+        margin-top: 40px;
+    }
+
+    &__slide {
+        a {
+            text-decoration: none;
+        }
+        .like__card {
+            @include flex-center;
+            @include slide-head;
+            @include slide-focus;
+            img {
+                @include slide-img;
+            }
+        }
+        &-title {
+            margin-top: 10px;
+        }
+
+        &-meta {
+            margin-top: 1px;
+            @include slide-info;
+        }
+    }
+
+    &__controls {
+        margin-top: 40px;
+        .swiper-pagination {
+            @include flex-center;
+            position: static;
+        }
+        .swiper-button-prev,
+        .swiper-button-next {
+            display: none;
+        }
+
+        .like-pagination {
+            @include flex-center;
+        }
+
+        .like-pagination__bullet {
+            width: 16px;
+            height: 16px;
+            margin: 0 15px !important;
+            border-radius: 50%;
+            border: none;
+            padding: 0;
+            background: $black;
+            opacity: 0.3;
+            transition: width 0.25s ease, height 0.25s ease, margin 0.25s ease,
+                opacity 0.25s ease, transform 0.25s ease;
+            transform: translateX(0) scale(1);
+            cursor: pointer;
+        }
+
+        .like-pagination__bullet--secondary {
+            width: 12px;
+            height: 12px;
+            transform: scale(0.9);
+        }
+
+        .like-pagination__bullet--edge {
+            width: 8px;
+            height: 8px;
+            transform: scale(0.85);
+        }
+
+        .like-pagination__bullet--hidden {
+            width: 0;
+            height: 0;
+            margin: 0 !important;
+            opacity: 0;
+            transform: scale(0.6);
+            pointer-events: none;
+        }
+
+        .like-pagination__bullet--active {
+            opacity: 1;
+        }
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .like {
+        &__slide {
+            .like__card {
+                img {
+                    width: 160px;
+                    height: 154px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .like {
+        padding: 80px 0 90px;
+        &__swiper {
+            margin-top: 50px;
+        }
+
+        &__slide {
+            .like__card {
+                img {
+                    width: 254px;
+                    height: 243px;
+                }
+            }
+            &-title {
+                margin-top: 15px;
+            }
+
+            &-meta {
+                margin-top: 3px;
+                font-size: 21px;
+            }
+        }
+        &__controls {
+            margin-top: 50px;
+        }
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .like {
+        padding: 80px 0 14px;
+        &__slide {
+            .like__card {
+                img {
+                    width: 207px;
+                    height: 198px;
+                }
+            }
+        }
+        &__controls {
+            margin-top: 50px;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .like {
+        padding: 130px 0 70px;
+        &__swiper {
+            margin-top: 60px;
+        }
+
+        &__slide {
+            .like__card {
+                @include slide-hover;
+                img {
+                    width: 266px;
+                    height: 256px;
+                }
+            }
+            &-title {
+                margin-top: 20px;
+            }
+
+            &-meta {
+                margin-top: 5px;
+            }
+        }
+
+        &__controls {
+            margin-top: 60px;
+            @include flex-center;
+            gap: 50px;
+            .swiper-pagination {
+                max-width: 246px;
+            }
+            .swiper-button-prev,
+            .swiper-button-next {
+                @include navigation-arrow;
+            }
+        }
+    }
+}

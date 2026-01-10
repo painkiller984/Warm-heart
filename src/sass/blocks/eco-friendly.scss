@@ -1,0 +1,64 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.eco {
+    background-color: $beige;
+    padding: 70px 0 90px;
+    .icon-eco-friendly {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: -120px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &__title {
+        text-align: center;
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        p {
+            color: $black;
+            font-size: 17px;
+            font-weight: 400;
+            line-height: 140%;
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .eco {
+        padding: 90px 0 120px;
+        .icon-eco-friendly {
+            width: 150px;
+            height: 150px;
+            top: -170px;
+        }
+        &__text {
+            gap: 30px;
+            p {
+                font-size: 21px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .eco {
+        &__text {
+            margin: 0 auto;
+            width: 802px;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .eco {
+        padding: 130px 0 150px;
+        .icon-eco-friendly {
+            top: -210px;
+        }
+    }
+}

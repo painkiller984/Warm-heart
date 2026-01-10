@@ -1,0 +1,142 @@
+@use "/src/sass/base/variables.scss" as *;
+
+@mixin btn-black {
+    color: $white;
+    font-weight: 700;
+    line-height: 140%;
+    text-align: center;
+    border-radius: 100px;
+    padding: 13px 80px 18px 80px;
+    background: $black;
+    cursor: pointer;
+}
+
+@mixin btn-black-small {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    border-radius: 100px;
+    padding: 13px 25px 14px 25px;
+    background: $black;
+    cursor: pointer;
+}
+
+@mixin btn-white {
+    color: $black;
+    font-weight: 700;
+    line-height: 140%;
+    text-align: center;
+    border-radius: 100px;
+    padding: 13px 80px 18px 80px;
+    background: $white;
+    cursor: pointer;
+}
+
+@mixin btn-actions {
+    flex: 1;
+    padding: 14px;
+    border-radius: 6px;
+    color: $black;
+    font-weight: 400;
+    line-height: 130%;
+    text-align: center;
+    cursor: pointer;
+}
+
+@mixin filter-tag {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: $black;
+    color: $white;
+    padding: 6px 30px 10px 30px;
+    border-radius: 100px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin slide-head {
+    position: relative;
+    width: 100%;
+    height: 312px;
+    border-radius: 25px;
+    background-color: $beige;
+    transition: border-radius 0.5s ease;
+    cursor: pointer;
+}
+
+@mixin slide-img {
+    object-fit: contain;
+    width: 240px;
+    height: 232px;
+    transition: transform 0.5s ease;
+}
+
+@mixin slide-info {
+    display: flex;
+    justify-content: space-between;
+    color: $black;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+@mixin slide-focus {
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        background-image: url("/src/icons/add.png");
+        width: 70px;
+        height: 70px;
+        top: 0;
+        right: 0;
+        display: none;
+    }
+
+    &:focus {
+        border-radius: 5000px;
+
+        &::before {
+            display: block;
+        }
+
+        img {
+            transform: scale(1.2) rotate(5deg);
+        }
+    }
+}
+
+@mixin slide-hover {
+    &:hover {
+        border-radius: 5000px;
+
+        &::before {
+            display: block;
+        }
+
+        img {
+            transform: scale(1.2) rotate(5deg);
+        }
+    }
+}
+
+@mixin navigation-arrow {
+    display: block;
+    width: 30px;
+    height: 20px;
+    position: static;
+
+    .icon-arrow-left,
+    .icon-arrow-right {
+        color: $black;
+    }
+}

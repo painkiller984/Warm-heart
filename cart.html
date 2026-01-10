@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Website for Warm Heart" />
+        <title>Cart</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            href="/src/favicons/favicon-96x96.png"
+            sizes="96x96"
+        />
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="/src/favicons/favicon.svg"
+        />
+        <link rel="shortcut icon" href="/src/favicons/favicon.ico" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/src/favicons/apple-touch-icon.png"
+        />
+        <link rel="manifest" href="/src/favicons/site.webmanifest" />
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__nav">
+                <a href="shop.html">Shop</a><a href="about.html">About us</a
+                ><a href="contacts.html">Contacts</a>
+            </div>
+
+            <div class="header__burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="header__menu">
+                <div class="header__menu-close"><span></span><span></span></div>
+                <div class="header__menu-links">
+                    <a href="shop.html">Shop</a>
+                    <a href="about.html">About us</a>
+                    <a href="contacts.html">Contacts</a>
+                </div>
+                <div class="header__menu-line"></div>
+                <form action="#" class="header__menu-search-form">
+                    <input
+                        class="header__menu-search"
+                        type="search"
+                        name="search"
+                        placeholder="Search"
+                    />
+                </form>
+                <a href="cart.html">Cart (<span class="cart-count">0</span>)</a>
+            </div>
+
+            <div class="header__overlay"></div>
+
+            <a href="index.html" class="header__title">
+                <span>wh</span>
+                <span>warm heart</span>
+            </a>
+
+            <div class="header__links">
+                <div class="header__links-left">
+                    <span>Search</span>
+                    <svg class="icon-search">
+                        <use href="/src/icons/sprite.svg#search"></use>
+                    </svg>
+                </div>
+                <div class="header__links-right">
+                    <a href="cart.html">
+                        <svg class="icon-shopping-bag">
+                            <use
+                                href="/src/icons/sprite.svg#shopping-bag"
+                            ></use>
+                        </svg>
+                    </a>
+                    <a href="cart.html">
+                        <div class="header__links-right-text">
+                            <span>Cart </span>(<span class="cart-count">0</span
+                            >)
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <section class="cart">
+            <div class="container">
+                <h1 class="title-h1">Shopping cart</h1>
+                <div class="cart__wrapper">
+                    <div class="cart__goods">
+                        <div class="cart__good">
+                            <div class="cart__good-img">
+                                <img
+                                    src="/src/img/shop/helgum.png"
+                                    alt="ingrum"
+                                />
+                            </div>
+                            <div class="cart__good-wrapper">
+                                <div class="cart__good-info">
+                                    <p class="title-h3 cart__good-info-title">
+                                        Ingrun
+                                    </p>
+                                    <p class="cart__good-info-text">
+                                        150x200 cm, beige
+                                    </p>
+                                </div>
+                                <div class="cart__good-right">
+                                    <div class="product__info-add">
+                                        <svg class="icon-minus">
+                                            <use
+                                                xlink:href="/src/icons/sprite.svg#minus"
+                                            ></use>
+                                        </svg>
+                                        <div class="product__info-add-count">
+                                            <span
+                                                class="product__info-add-count-number"
+                                                >1</span
+                                            >
+                                        </div>
+                                        <svg class="icon-plus">
+                                            <use
+                                                xlink:href="/src/icons/svg/plus.svg"
+                                            ></use>
+                                        </svg>
+                                    </div>
+                                    <div class="cart__good-right-sell">
+                                        €135
+                                    </div>
+                                </div>
+                                <div class="cart__good-cross">
+                                    <span></span><span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart__order">
+                        <p class="title-h4 cart__order-title">Order summary</p>
+
+                        <ul class="cart__order-purchase">
+                            <li class="cart__order-purchase-left">Subtotal:</li>
+                            <li class="cart__order-purchase-right">€955</li>
+                            <li class="cart__order-purchase-left">Shipping:</li>
+                            <li class="cart__order-purchase-right">
+                                free shipping
+                            </li>
+                            <li class="title-h3">Total:</li>
+                            <li class="title-h3">€955</li>
+                        </ul>
+                        <button class="btn cart__order-btn">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__wrapper">
+                    <div class="footer__head">
+                        <h4 class="title-h4 footer__head-title">
+                            <a href="index.html">warm heart</a>
+                        </h4>
+
+                        <div class="footer__head-social">
+                            <a href="#"
+                                ><svg class="footer__head-social-icon">
+                                    <use
+                                        xlink:href="/src/icons/sprite.svg#instagram"
+                                    ></use></svg
+                            ></a>
+                            <a href="#"
+                                ><svg class="footer__head-social-icon">
+                                    <use
+                                        xlink:href="/src/icons/sprite.svg#facebook"
+                                    ></use></svg
+                            ></a>
+                            <a href="#"
+                                ><svg class="footer__head-social-icon">
+                                    <use
+                                        xlink:href="/src/icons/sprite.svg#twitter"
+                                    ></use></svg
+                            ></a>
+                        </div>
+                    </div>
+                    <div class="footer__privacy-head">
+                        <p>© WARM HEART 2025</p>
+                        <p><a href="privacy.html">Privacy policy</a></p>
+                    </div>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__links-item">
+                        <div class="footer__links-item-header">Info</div>
+                        <div class="footer__links-item-body">
+                            <ul>
+                                <li><a href="about.html">About us</a></li>
+                                <li><a href="contacts.html">Contacts</a></li>
+                                <li><a href="shop.html">Shop</a></li>
+                                <li><a href="FAQ.html">FAQ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer__links-line"></div>
+
+                    <div class="footer__links-item">
+                        <div class="footer__links-item-header">
+                            Customer service
+                        </div>
+                        <div class="footer__links-item-body">
+                            <ul>
+                                <li><a href="#">Delivery and pickup</a></li>
+                                <li><a href="#">Payment</a></li>
+                                <li><a href="#">Exchange and return</a></li>
+                                <li><a href="#">Help</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer__links-line"></div>
+
+                    <div class="footer__links-item">
+                        <div class="footer__links-item-header">
+                            Useful information
+                        </div>
+                        <div class="footer__links-item-body">
+                            <ul>
+                                <li><a href="#">Suppliers</a></li>
+                                <li><a href="#">Buying guides</a></li>
+                                <li><a href="#">Principle of operation</a></li>
+                                <li><a href="#">Press service</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer__links-line"></div>
+                </div>
+
+                <div class="footer__privacy">
+                    <p>© WARM HEART 2025</p>
+                    <p><a href="privacy.html">Privacy policy</a></p>
+                </div>
+            </div>
+        </footer>
+        <script type="module" src="/src/js/script.js"></script>
+    </body>
+</html>

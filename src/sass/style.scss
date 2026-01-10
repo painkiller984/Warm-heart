@@ -1,0 +1,35 @@
+@use "/src/sass/libs/modern-normalize.min.css";
+@use "/src/sass/base/basic.scss";
+@use "/src/sass/base/mixins.scss";
+@use "/src/sass/base/variables.scss";
+
+@use "/src/sass/ui/buttons.scss";
+@use "/src/sass/ui/titles.scss";
+
+@use "/src/sass/blocks/header.scss";
+@use "/src/sass/blocks/promo";
+@use "/src/sass/blocks/popular.scss";
+@use "/src/sass/blocks/comfort.scss";
+@use "/src/sass/blocks/eco-friendly.scss";
+@use "/src/sass/blocks/follow-us.scss";
+@use "/src/sass/blocks/get.scss";
+
+@use "/src/sass/blocks/shop-promo.scss";
+@use "/src/sass/blocks/shop.scss";
+@use "/src/sass/blocks/shop-2.scss";
+
+@use "/src/sass/blocks/product.scss";
+@use "/src/sass/blocks/like.scss";
+@use "/src/sass/blocks/last-viewed.scss";
+
+@use "/src/sass/blocks/cart.scss";
+
+@use "/src/sass/blocks/contacts.scss";
+
+@use "/src/sass/blocks/about.scss";
+
+@use "/src/sass/blocks/FAQ.scss";
+
+@use "/src/sass/blocks/privacy.scss";
+
+@use "/src/sass/blocks/footer.scss";
