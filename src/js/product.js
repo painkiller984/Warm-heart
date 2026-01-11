@@ -448,6 +448,71 @@ function renderCartPage() {
     const totalEl = totalEls.length > 1 ? totalEls[1] : totalEls[0];
     if (!goodsContainer) return;
 
+    const minusIconHref =
+        new URL("../icons/sprite.svg", import.meta.url).href + "#minus";
+    const plusIconHref =
+        new URL("../icons/sprite.svg", import.meta.url).href + "#plus";
+    const qtyTemplate = goodsContainer.querySelector(".product__info-add");
+
+    const createQtyBlock = () => {
+        if (qtyTemplate) {
+            const clone = qtyTemplate.cloneNode(true);
+            return {
+                block: clone,
+                minus: clone.querySelector(".icon-minus"),
+                plus: clone.querySelector(".icon-plus"),
+                qtySpan: clone.querySelector(".product__info-add-count-number"),
+            };
+        }
+
+        const block = document.createElement("div");
+        block.className = "product__info-add";
+
+        const minus = document.createElementNS(
+            "http://www.w3.org/2000/svg",
+            "svg"
+        );
+        minus.classList.add("icon-minus");
+        const minusUse = document.createElementNS(
+            "http://www.w3.org/2000/svg",
+            "use"
+        );
+        minusUse.setAttributeNS(
+            "http://www.w3.org/1999/xlink",
+            "href",
+            minusIconHref
+        );
+        minus.appendChild(minusUse);
+
+        const qtyWrap = document.createElement("div");
+        qtyWrap.className = "product__info-add-count";
+        const qtySpan = document.createElement("span");
+        qtySpan.className = "product__info-add-count-number";
+        qtyWrap.appendChild(qtySpan);
+
+        const plus = document.createElementNS(
+            "http://www.w3.org/2000/svg",
+            "svg"
+        );
+        plus.classList.add("icon-plus");
+        const plusUse = document.createElementNS(
+            "http://www.w3.org/2000/svg",
+            "use"
+        );
+        plusUse.setAttributeNS(
+            "http://www.w3.org/1999/xlink",
+            "href",
+            plusIconHref
+        );
+        plus.appendChild(plusUse);
+
+        block.appendChild(minus);
+        block.appendChild(qtyWrap);
+        block.appendChild(plus);
+
+        return { block, minus, plus, qtySpan };
+    };
+
     const cart = readCart();
     goodsContainer.innerHTML = "";
 
@@ -489,50 +554,8 @@ function renderCartPage() {
         const right = document.createElement("div");
         right.className = "cart__good-right";
 
-        const qtyBlock = document.createElement("div");
-        qtyBlock.className = "product__info-add";
-        const minus = document.createElementNS(
-            "http://www.w3.org/2000/svg",
-            "svg"
-        );
-        minus.classList.add("icon-minus");
-        const minusUse = document.createElementNS(
-            "http://www.w3.org/2000/svg",
-            "use"
-        );
-        minusUse.setAttributeNS(
-            "http://www.w3.org/1999/xlink",
-            "href",
-            "/src/icons/sprite.svg#minus"
-        );
-        minus.appendChild(minusUse);
-
-        const qtyWrap = document.createElement("div");
-        qtyWrap.className = "product__info-add-count";
-        const qtySpan = document.createElement("span");
-        qtySpan.className = "product__info-add-count-number";
-        qtySpan.textContent = item.qty;
-        qtyWrap.appendChild(qtySpan);
-
-        const plus = document.createElementNS(
-            "http://www.w3.org/2000/svg",
-            "svg"
-        );
-        plus.classList.add("icon-plus");
-        const plusUse = document.createElementNS(
-            "http://www.w3.org/2000/svg",
-            "use"
-        );
-        plusUse.setAttributeNS(
-            "http://www.w3.org/1999/xlink",
-            "href",
-            "/src/icons/svg/plus.svg#plus"
-        );
-        plus.appendChild(plusUse);
-
-        qtyBlock.appendChild(minus);
-        qtyBlock.appendChild(qtyWrap);
-        qtyBlock.appendChild(plus);
+        const { block: qtyBlock, minus, plus, qtySpan } = createQtyBlock();
+        if (qtySpan) qtySpan.textContent = item.qty;
 
         const price = document.createElement("div");
         price.className = "cart__good-right-sell";
@@ -629,3 +652,4 @@ function initProductPageCart() {
 updateCartCounters();
 initProductPageCart();
 renderCartPage();
+
