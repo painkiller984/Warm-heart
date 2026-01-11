@@ -1,4 +1,5 @@
 ﻿import products from "./products.js";
+import { resolveAsset, resolveAssetList } from "./assets.js";
 
 function getProductIdFromURL() {
     const params = new URLSearchParams(window.location.search);
@@ -58,7 +59,10 @@ function buildSearchData(list) {
         title: item.title || "",
         price: item.price || "",
         color: item.color || "",
-        img: item.images && item.images.length ? item.images[0] : "",
+        img:
+            item.images && item.images.length
+                ? resolveAsset(item.images[0])
+                : "",
     }));
 }
 
@@ -292,7 +296,7 @@ function renderLastViewed() {
         card.className = "last-viewed__card";
 
         const img = document.createElement("img");
-        img.src = (productData.images && productData.images[0]) || "";
+        img.src = resolveAsset(productData.images && productData.images[0]);
         img.alt = productData.title || "";
 
         card.appendChild(img);
@@ -336,11 +340,12 @@ function applyProduct(product) {
     setTextContent(deliveryEl, product.delivery || "");
     const mainImages =
         product.images && product.images.length
-            ? product.images
-            : ["/src/img/shop/helgum.png"];
+            ? resolveAssetList(product.images)
+            : resolveAssetList(["shop/helgum.png"]);
     const thumbImages =
-        (product.thumbs && product.thumbs.length && product.thumbs) ||
-        mainImages;
+        product.thumbs && product.thumbs.length
+            ? resolveAssetList(product.thumbs)
+            : mainImages;
 
     renderSlides(
         swiperMainWrapper,
@@ -531,7 +536,7 @@ function renderCartPage() {
         const imgWrap = document.createElement("div");
         imgWrap.className = "cart__good-img";
         const img = document.createElement("img");
-        img.src = info.images?.[0] || "";
+        img.src = resolveAsset(info.images?.[0]);
         img.alt = info.title || "";
         imgWrap.appendChild(img);
 
@@ -652,4 +657,3 @@ function initProductPageCart() {
 updateCartCounters();
 initProductPageCart();
 renderCartPage();
-
