@@ -48,10 +48,6 @@ function renderThumbs(wrapper, imgs, slideClass) {
     navButtons.forEach((btn) => wrapper.appendChild(btn));
 }
 
-// ===================================================================
-//                           РџРѕРёСЃРє РІ header
-// ===================================================================
-
 function buildSearchData(list) {
     if (!Array.isArray(list)) return [];
     return list.map((item) => ({
@@ -203,6 +199,8 @@ function initHeaderInlineSearch() {
     );
 }
 
+// SEARCH
+
 function initMenuSearch() {
     const form = document.querySelector(".header__menu-search-form");
     const input = document.querySelector(".header__menu-search");
@@ -247,9 +245,7 @@ function initMenuSearch() {
     });
 }
 
-// ===================================================================
-//                         Last viewed
-// ===================================================================
+// LAST VIEWED
 
 const LAST_VIEWED_KEY = "lastViewedProducts";
 const LAST_VIEWED_LIMIT = 4;
@@ -272,9 +268,7 @@ function saveLastViewed(id) {
     const trimmed = current.slice(0, LAST_VIEWED_LIMIT);
     try {
         localStorage.setItem(LAST_VIEWED_KEY, JSON.stringify(trimmed));
-    } catch (e) {
-        /* ignore quota errors */
-    }
+    } catch (e) {}
 }
 
 function renderLastViewed() {
@@ -368,9 +362,7 @@ renderLastViewed();
 initHeaderInlineSearch();
 initMenuSearch();
 
-// ===================================================================
-//                          Cart logic
-// ===================================================================
+// CART
 
 const CART_KEY = "cartItems";
 

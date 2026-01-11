@@ -7,9 +7,8 @@ import "swiper/css/pagination";
 import JustValidate from "just-validate";
 import "./product.js";
 import markerIconUrl from "/src/logo/warm-heart-logo.png";
-// ===================================================================
-//                           SWIPER
-// ===================================================================
+
+// PROMO SWIPER
 
 let swiper = null;
 if (document.querySelector(".promo__swiper")) {
@@ -25,6 +24,8 @@ if (document.querySelector(".promo__swiper")) {
         },
     });
 }
+
+// POPULAR SWIPER
 
 let popularSwiper = null;
 if (document.querySelector(".popular__swiper")) {
@@ -46,9 +47,7 @@ if (document.querySelector(".popular__swiper")) {
 
 let shopSwiper = null;
 
-// ===================================================================
-//                           БУРГЕР
-// ===================================================================
+// BURGER
 
 const headerBurger = document.querySelector(".header__burger");
 const headerMenu = document.querySelector(".header__menu");
@@ -72,9 +71,8 @@ if (headerBurger && headerMenu && headerOverlay) {
 
 if (headerClose) headerClose.addEventListener("click", closeMenu);
 if (headerOverlay) headerOverlay.addEventListener("click", closeMenu);
-// ===================================================================
-//                         ВАЛИДАЦИЯ (только если форма есть)
-// ===================================================================
+
+// GET FORM
 
 if (document.querySelector(".get__form")) {
     const validation = new JustValidate(".get__form");
@@ -121,9 +119,7 @@ if (document.querySelector(".get__form")) {
         });
 }
 
-// ===================================================================
-//                         АККОРДЕОН В ФУТЕРЕ
-// ===================================================================
+// FOOTER ACCORDEON
 
 const footerItems = document.querySelectorAll(".footer__links-item");
 
@@ -141,6 +137,8 @@ footerItems.forEach((item) => {
         if (!isOpen) item.classList.add("footer__links-item--open");
     });
 });
+
+// SHOP SWIPER
 
 function mountShopSwiper(shopSwiperElement) {
     if (!shopSwiperElement) return null;
@@ -244,6 +242,8 @@ function mountShopSwiper(shopSwiperElement) {
 
     return shopSwiper;
 }
+
+// SHOP FILTERS
 
 try {
     document.addEventListener("DOMContentLoaded", function () {
@@ -567,6 +567,8 @@ try {
     });
 } catch (e) {}
 
+// PRODUCT SWIPER
+
 try {
     const productSwiper2 = new Swiper(".product__swiper-2", {
         modules: [FreeMode],
@@ -596,6 +598,8 @@ try {
         },
     });
 } catch (e) {}
+
+// CARD TABS
 
 try {
     document.addEventListener("DOMContentLoaded", () => {
@@ -638,8 +642,10 @@ try {
     });
 } catch (e) {}
 
+// LIKE SWIPER PAGINATION
+
 const LIKE_MAX_VISIBLE = 7;
-const LIKE_BULLET_SPACING = 46; // 16px bullet + 30px gap
+const LIKE_BULLET_SPACING = 46;
 
 function createLikePaginationTrack(swiper) {
     const paginationEl = swiper.pagination?.el;
@@ -792,6 +798,8 @@ function updateLikePagination(swiper) {
     }
 }
 
+// LIKE SWIPER
+
 try {
     const likeSwiper = new Swiper(".like__swiper", {
         modules: [Pagination, Navigation],
@@ -861,6 +869,8 @@ try {
         },
     });
 } catch (e) {}
+
+// MAP
 
 const LEAFLET_CSS_URL = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
 const LEAFLET_JS_URL = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js";
