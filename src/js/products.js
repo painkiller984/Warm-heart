@@ -2,7 +2,7 @@
     {
         id: "ingrum",
         title: "Ingrun",
-        price: "в‚¬90",
+        price: "€90",
         size: "130x170 cm",
         color: "gray",
         description:
@@ -25,7 +25,7 @@
     {
         id: "mialotta",
         title: "Mialotta",
-        price: "в‚¬140",
+        price: "€140",
         size: "130x170 cm",
         color: "orange",
         description:
@@ -48,7 +48,7 @@
     {
         id: "luddmalla",
         title: "Luddmalla",
-        price: "в‚¬95",
+        price: "€95",
         size: "130x170 cm",
         color: "gray",
         description: "Cozy blanket to keep you warm at home or outdoors.",
@@ -70,7 +70,7 @@
     {
         id: "vivianna",
         title: "Vivianna",
-        price: "в‚¬175",
+        price: "€175",
         size: "120x180 cm",
         color: "cappuccino",
         description:
@@ -93,7 +93,7 @@
     {
         id: "evali",
         title: "Evali",
-        price: "в‚¬90",
+        price: "€90",
         size: "130x170 cm",
         color: "cappuccino",
         description: "Lightweight everyday throw for couch and bed.",
@@ -115,7 +115,7 @@
     {
         id: "kersti",
         title: "Kersti",
-        price: "в‚¬175",
+        price: "€175",
         size: "150x200 cm",
         color: "orange",
         description:
@@ -138,7 +138,7 @@
     {
         id: "helgun",
         title: "Helgun",
-        price: "в‚¬135",
+        price: "€135",
         size: "150x200 cm",
         color: "beige",
         description:
@@ -161,7 +161,7 @@
     {
         id: "dagnhild",
         title: "Dagnhild",
-        price: "в‚¬150",
+        price: "€150",
         size: "150x200 cm",
         color: "yellow-beige",
         description:
@@ -184,7 +184,7 @@
     {
         id: "varkrage",
         title: "Varkrage",
-        price: "в‚¬90",
+        price: "€90",
         size: "110x170 cm",
         color: "red",
         description: "Compact throw for travel and quick warmth.",
@@ -206,7 +206,7 @@
     {
         id: "dablidun",
         title: "Dablidun",
-        price: "в‚¬170",
+        price: "€170",
         size: "150x200 cm",
         color: "red",
         description: "Warm and dense blanket for cold days.",
@@ -228,7 +228,7 @@
     {
         id: "ingabritta",
         title: "Ingabritta",
-        price: "в‚¬120",
+        price: "€120",
         size: "130x170 cm",
         color: "beige",
         description: "Textured weave that adds depth to your interior.",
@@ -250,7 +250,7 @@
     {
         id: "ylvali",
         title: "Ylvali",
-        price: "в‚¬110",
+        price: "€110",
         size: "150x200 cm",
         color: "gray",
         description: "Everyday throw with a calm neutral tone.",
@@ -272,7 +272,7 @@
     {
         id: "gerhild",
         title: "Gerhild",
-        price: "в‚¬90",
+        price: "€90",
         size: "130x170 cm",
         color: "gray",
         description: "Soft neutral blanket for everyday use.",
@@ -294,7 +294,7 @@
     {
         id: "gultall",
         title: "Gultall",
-        price: "в‚¬180",
+        price: "€180",
         size: "130x170 cm",
         color: "yellow",
         description: "Bright accent throw to warm up any interior.",
@@ -316,7 +316,7 @@
     {
         id: "rovaror",
         title: "Rovaror",
-        price: "в‚¬85",
+        price: "€85",
         size: "150x200 cm",
         color: "gray",
         description: "Durable large blanket for everyday comfort.",
@@ -338,7 +338,7 @@
     {
         id: "ulltistel",
         title: "Ulltistel",
-        price: "в‚¬150",
+        price: "€150",
         size: "130x170 cm",
         color: "beige",
         description: "Cozy plaid that keeps you warm on cool evenings.",
@@ -360,7 +360,7 @@
     {
         id: "gulklint",
         title: "Gulklint",
-        price: "в‚¬175",
+        price: "€175",
         size: "150x200 cm",
         color: "yellow",
         description: "Warm blanket with a bright pattern.",
