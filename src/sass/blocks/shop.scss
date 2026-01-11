@@ -214,13 +214,14 @@
         display: block;
         text-decoration: none;
         height: 375px;
+
         &__img {
             @include flex-center;
             @include slide-head;
             img {
                 @include slide-img;
             }
-            @include slide-focus;
+            @include slide-active;
         }
 
         &__title {

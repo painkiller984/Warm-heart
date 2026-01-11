@@ -89,7 +89,7 @@
     line-height: 140%;
 }
 
-@mixin slide-focus {
+@mixin slide-active {
     &::before {
         content: "";
         position: absolute;
@@ -102,7 +102,7 @@
         display: none;
     }
 
-    &:focus {
+    &:active {
         border-radius: 5000px;
 
         &::before {

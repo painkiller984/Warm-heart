@@ -14,7 +14,7 @@
         .like__card {
             @include flex-center;
             @include slide-head;
-            @include slide-focus;
+            @include slide-active;
             img {
                 @include slide-img;
             }
