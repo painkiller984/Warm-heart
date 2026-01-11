@@ -1,6 +1,7 @@
 const rawAssets = import.meta.glob("/src/img/**/*", {
     eager: true,
-    as: "url",
+    query: "?url",
+    import: "default",
 });
 
 const assetMap = Object.fromEntries(
