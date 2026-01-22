@@ -89,9 +89,9 @@ if (document.querySelector(".get__form")) {
             ],
             {
                 errorsContainer: document.querySelector(
-                    ".get__form-email-error"
+                    ".get__form-email-error",
                 ),
-            }
+            },
         )
         .onSuccess(async (event) => {
             event.preventDefault();
@@ -106,7 +106,7 @@ if (document.querySelector(".get__form")) {
                         method: "POST",
                         headers: { "Content-Type": "application/json" },
                         body: JSON.stringify({ email }),
-                    }
+                    },
                 );
 
                 if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -131,7 +131,7 @@ footerItems.forEach((item) => {
         const isOpen = item.classList.contains("footer__links-item--open");
 
         footerItems.forEach((i) =>
-            i.classList.remove("footer__links-item--open")
+            i.classList.remove("footer__links-item--open"),
         );
 
         if (!isOpen) item.classList.add("footer__links-item--open");
@@ -156,7 +156,7 @@ function mountShopSwiper(shopSwiperElement) {
 
     shopSwiper = new Swiper(shopSwiperElement, {
         modules: [Pagination, Navigation],
-        autoHeight: true,
+        // autoHeight: true,
         navigation: {
             clickable: true,
             nextEl,
@@ -196,7 +196,7 @@ function mountShopSwiper(shopSwiperElement) {
                         total - 3,
                         total - 2,
                         total - 1,
-                        total
+                        total,
                     );
                 } else {
                     pages.push(
@@ -204,7 +204,7 @@ function mountShopSwiper(shopSwiperElement) {
                         current + 1,
                         current + 2,
                         "ellipsis",
-                        total
+                        total,
                     );
                 }
 
@@ -230,7 +230,7 @@ function mountShopSwiper(shopSwiperElement) {
                 if (!paginationEl) return;
                 paginationEl.addEventListener("click", (e) => {
                     const target = e.target.closest(
-                        ".swiper-pagination-bullet"
+                        ".swiper-pagination-bullet",
                     );
                     if (!target) return;
                     const idx = Number(target.dataset.index);
@@ -255,10 +255,10 @@ try {
         const applyBtn = document.getElementById("applyBtn");
         const activeFiltersContainer = document.getElementById("activeFilters");
         const productsCount = document.querySelector(
-            ".shop__filters-right-count"
+            ".shop__filters-right-count",
         );
         const filterInputs = document.querySelectorAll(
-            '.filter-option input[type="checkbox"]'
+            '.filter-option input[type="checkbox"]',
         );
         const shopSwiperElement =
             document.querySelector(".shop__swiper") ||
@@ -281,12 +281,12 @@ try {
                     color: (card.dataset.color || "").toLowerCase(),
                     material: (card.dataset.material || "").toLowerCase(),
                     price: Number(card.dataset.price) || 0,
-                })
+                }),
             );
         const placeholderSlides =
             shopWrapper &&
             Array.from(shopWrapper.querySelectorAll(".swiper-slide")).filter(
-                (slide) => !slide.querySelector(cardSelector)
+                (slide) => !slide.querySelector(cardSelector),
             );
         const filterGroups = document.querySelectorAll(".filter-group");
 
@@ -310,7 +310,7 @@ try {
                     .forEach((label) => {
                         label.classList.toggle(
                             "filter-label-checked",
-                            isChecked
+                            isChecked,
                         );
                     });
             });
@@ -330,7 +330,7 @@ try {
             };
 
             const checkedFilters = document.querySelectorAll(
-                '.filter-option input[type="checkbox"]:checked'
+                '.filter-option input[type="checkbox"]:checked',
             );
 
             checkedFilters.forEach((checkbox) => {
@@ -416,7 +416,7 @@ try {
 
             mountShopSwiper(shopSwiperElement);
             updateProductsCount(
-                shopWrapper.querySelectorAll(cardSelector).length
+                shopWrapper.querySelectorAll(cardSelector).length,
             );
         }
 
@@ -425,7 +425,7 @@ try {
 
             const filters = getSelectedFilters();
             const filteredCards = shopCards.filter((item) =>
-                matchesFilters(item, filters)
+                matchesFilters(item, filters),
             );
 
             renderShopSlides(filteredCards);
@@ -436,7 +436,7 @@ try {
             activeFiltersContainer.innerHTML = "";
 
             const checkedFilters = document.querySelectorAll(
-                '.filter-option input[type="checkbox"]:checked'
+                '.filter-option input[type="checkbox"]:checked',
             );
 
             checkedFilters.forEach((checkbox) => {
@@ -604,10 +604,10 @@ try {
 try {
     document.addEventListener("DOMContentLoaded", () => {
         const tabButtons = Array.from(
-            document.querySelectorAll("[data-tab-target]")
+            document.querySelectorAll("[data-tab-target]"),
         );
         const tabPanels = Array.from(
-            document.querySelectorAll("[data-tab-panel]")
+            document.querySelectorAll("[data-tab-panel]"),
         );
 
         if (!tabButtons.length || !tabPanels.length) {
@@ -620,7 +620,7 @@ try {
 
                 button.setAttribute(
                     "aria-selected",
-                    isActive ? "true" : "false"
+                    isActive ? "true" : "false",
                 );
                 button.tabIndex = isActive ? 0 : -1;
                 button.classList.toggle("product__tab--active", isActive);
@@ -674,7 +674,7 @@ function updateLikePagination(swiper) {
 
     const isWide = window.matchMedia("(min-width: 480px)").matches;
     const isMedium = window.matchMedia(
-        "(min-width: 480px) and (max-width: 999px)"
+        "(min-width: 480px) and (max-width: 999px)",
     ).matches;
     const isLarge = window.matchMedia("(min-width: 1000px)").matches;
     const total = bullets.length;
@@ -717,7 +717,7 @@ function updateLikePagination(swiper) {
 
     track.style.setProperty(
         "--like-shift",
-        `${-start * LIKE_BULLET_SPACING}px`
+        `${-start * LIKE_BULLET_SPACING}px`,
     );
 
     bullets.forEach((bullet, idx) => {
@@ -726,7 +726,7 @@ function updateLikePagination(swiper) {
             "like-pagination__bullet--secondary",
             "like-pagination__bullet--main",
             "like-pagination__bullet--hidden",
-            "like-pagination__bullet--active"
+            "like-pagination__bullet--active",
         );
         bullet.style.width = "";
         bullet.style.height = "";
@@ -788,7 +788,7 @@ function updateLikePagination(swiper) {
         prev.classList.remove(
             "like-pagination__bullet--edge",
             "like-pagination__bullet--secondary",
-            "like-pagination__bullet--hidden"
+            "like-pagination__bullet--hidden",
         );
         prev.classList.add("like-pagination__bullet--main");
         prev.style.width = "16px";
@@ -834,7 +834,7 @@ try {
                 if (paginationEl) {
                     paginationEl.addEventListener("click", (e) => {
                         const target = e.target.closest(
-                            ".like-pagination__bullet"
+                            ".like-pagination__bullet",
                         );
                         if (!target) return;
                         const idx = Number(target.dataset.index);
@@ -904,7 +904,7 @@ function loadLeafletScript() {
         return new Promise((resolve, reject) => {
             existing.addEventListener("load", () => resolve(window.L));
             existing.addEventListener("error", () =>
-                reject(new Error("Leaflet failed to load"))
+                reject(new Error("Leaflet failed to load")),
             );
         });
     }
@@ -941,7 +941,7 @@ async function createLeafletContactsMap() {
                 attribution:
                     '&copy; OpenStreetMap contributors &copy; <a href="https://carto.com/">CARTO</a>',
                 maxZoom: 19,
-            }
+            },
         ).addTo(map);
 
         const markerIcon = L.icon({
@@ -958,7 +958,7 @@ async function createLeafletContactsMap() {
             const latLng = L.latLng(item.coords[0], item.coords[1]);
             bounds.extend(latLng);
             L.marker(latLng, { icon: markerIcon, title: item.title }).addTo(
-                map
+                map,
             );
         });
 
