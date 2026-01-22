@@ -382,19 +382,19 @@ try {
             return sizeMatch && colorMatch && materialMatch && priceMatch;
         }
 
-        function renderShopSlides(slides) {
+        function renderShopSlides(slides, startIndex = 0) {
             if (!shopWrapper || !shopSwiperElement) return;
-
-            if (shopSwiper) {
-                shopSwiper.destroy(true, true);
-                shopSwiper = null;
-            }
 
             shopWrapper.innerHTML = "";
 
             if (!slides.length) {
                 mountShopSwiper(shopSwiperElement);
                 return;
+            }
+
+            if (shopSwiper) {
+                shopSwiper.destroy(true, true);
+                shopSwiper = null;
             }
 
             const chunkSize = getCardsPerSlide(shopSwiperElement);
@@ -414,13 +414,21 @@ try {
                 });
             }
 
-            mountShopSwiper(shopSwiperElement);
-            updateProductsCount(
-                shopWrapper.querySelectorAll(cardSelector).length,
+            const newSwiper = mountShopSwiper(shopSwiperElement);
+            const maxIndex = Math.max(
+                (newSwiper?.slides?.length || 1) - 1,
+                0,
             );
+            const targetIndex = Math.min(startIndex, maxIndex);
+
+            if (newSwiper && targetIndex > 0) {
+                newSwiper.slideTo(targetIndex, 0);
+            }
+
+            updateProductsCount(shopWrapper.querySelectorAll(cardSelector).length);
         }
 
-        function applyShopFilters() {
+        function applyShopFilters(preserveIndex = false) {
             if (!shopCards || !shopCards.length || !shopWrapper) return;
 
             const filters = getSelectedFilters();
@@ -428,7 +436,12 @@ try {
                 matchesFilters(item, filters),
             );
 
-            renderShopSlides(filteredCards);
+            const currentIndex =
+                preserveIndex && shopSwiper
+                    ? shopSwiper.activeIndex || 0
+                    : 0;
+
+            renderShopSlides(filteredCards, currentIndex);
         }
 
         function updateActiveFilters() {
@@ -561,7 +574,7 @@ try {
         window.addEventListener("resize", () => {
             clearTimeout(resizeTimer);
             resizeTimer = setTimeout(() => {
-                applyShopFilters();
+                applyShopFilters(true);
             }, 150);
         });
     });
